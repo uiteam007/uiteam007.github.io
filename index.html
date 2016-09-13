@@ -8,7 +8,75 @@
 
 
 <body>
-Hi Ui team
+<!doctype html>
+<html ng-app="angjspapp">
+
+<head>
+  <title>rottentomatoes</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+
+  <div ng-controller="angjspctrl">
+
+    <div class="container">
+
+      <!--     header for input and Rotten tomatos img-->
+      <div class="head">
+
+        <!--      image -->
+        <span class="img"><img src="rt.png"/></span>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="input"><span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="PressForMovie()">Go!</button>
+      </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content box -->
+    <div class="jumbotron">
+      <h3>Find Movies</h3>
+
+      <div ng-repeat="movie in mymovies" class="row">
+
+        <div class="col-sm-4">
+          <h3>Year</h3>
+          <p>{{movie.year}}</p>
+        </div>
+
+        <div class="col-sm-4">
+          <h3>Movie</h3>
+          <p> {{movie.title}} </p>
+        </div>
+
+        <div class="col-sm-4">
+          <h3>Poster</h3>
+          <p><img ng-src="{{movie.posters.thumbnail}}"></p>
+        </div>
+
+        <div class="col-sm-4">
+          <h3>movie length</h3>
+          <p>{{movie.runtime +" mintues"}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+.head {
+  background-color: forestgreen;
+  height: 8em;
+  width: 81em;
+  border-radius: 1em;
+  text-align: center;
+  padding: 1em;
+}
+
+.img {
+  float: left;
+  padding: 0px;
+}
