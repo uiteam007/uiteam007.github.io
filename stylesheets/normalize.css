@@ -422,3 +422,8 @@ td,
 th {
   padding: 0;
 }
+#button{
+    float:left;
+    background: blue;
+    padding: 2em;
+}
