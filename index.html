@@ -24,55 +24,84 @@
 </head>
 
 <body>
+<div ng-controller="formctrl">
+ <div class="container">
+<div class="formbox">
+<form>
 
-  <div ng-controller="angjspctrl">
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+     <img ng-src="CREDIT-CARD-LOGOS (2).jpg" alt="Cinque Terre" width="50px" height="30px" >
+    </label>
 
-    <div class="container">
 
-      <!--     header for input and Rotten tomatos img-->
-      <div class="head">
-
-        <!--      image -->
-        <span class="img"><img src="rt.png"/></span>
-        <div class="col-lg-4">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." ng-model="input"><span class="input-group-btn">
-        <button class="btn btn-default" type="button" ng-click="PressForMovie()">Go!</button>
-      </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- content box -->
-    <div class="jumbotron">
-      <h3>Find Movies</h3>
-
-      <div ng-repeat="movie in mymovies" class="row">
-
-        <div class="col-sm-4">
-          <h3>Year</h3>
-          <p>{{movie.year}}</p>
-        </div>
-
-        <div class="col-sm-4">
-          <h3>Movie</h3>
-          <p> {{movie.title}} </p>
-        </div>
-
-        <div class="col-sm-4">
-          <h3>Poster</h3>
-          <p><img ng-src="{{movie.posters.thumbnail}}"></p>
-        </div>
-
-        <div class="col-sm-4">
-          <h3>movie length</h3>
-          <p>{{movie.runtime +" mintues"}}</p>
-        </div>
-      </div>
-    </div>
-
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+     <img ng-src="CREDIT-CARD-LOGOS (3).jpg" alt="Cinque Terre" width="50px" height="40px" >
+    </label>
   </div>
+ <div>
+   <fieldset class="form-group col-xs-3">
+    <label for="exampleSelect1">Card Type</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>Visa</option>
+      <option>MasterCard</option>
+      <option>PayPal</option>
+    </select>
+  </fieldset>
+  </div>
+  <br>
+<div class="inputA">
+  <fieldset class="form-group ">
+    <label for="exampleInputEmail1" name="regis">Card Number</label>
+    
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="0123456789">
+    <small class="text-muted">We'll never share your email with anyone else.</small>
+  </fieldset>
+  </div>
+<div class="inputB col-xs-3">
+  <fieldset class="form-group">
+    <label for="exampleInputPassword1">Security Code</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="000">
+  </fieldset>
+  </div>
+  
+  
+    <fieldset class="inputC">
+    <label for="exampleSelect2">Expiration Year</label>
+    <select multiple class="form-control" id="exampleSelect2">
+      <option>2016</option>
+      <option>2017</option>
+      <option>2018</option>
+      <option>2019</option>
+      <option>2020</option>
+    </select>
+  </fieldset>
+
+ 
+ 
+ 
+ <div class="inputD">
+  <fieldset class="form-group">
+    <label for="exampleTextarea">Billing Address</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </fieldset>
+  
+  
+ 
+
+
+
+  <button type="submit" class="btn btn-primary">
+   PROCEED TO REVIEW  <span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+  </div>
+</form>
+   
+   
+ </div>
+   </div>
+</div>
 
 </body>
 
